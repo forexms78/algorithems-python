@@ -7,3 +7,5 @@ def twoSum(nums, target):
     return False
 
 print(twoSum(nums=[4,1,9,7,5,3,16], target=14))
+print(twoSum(nums=[2,1,5,7], target=4))
+
