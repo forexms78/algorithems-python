@@ -45,9 +45,6 @@ class LinkedList(object):
             current = current.next
         current.next = current.next.next
         
-
-
-        
         
 ll = LinkedList()
 ll.append(9) # index 0
