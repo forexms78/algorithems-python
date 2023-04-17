@@ -1,18 +1,23 @@
-def LCS(nums):
-    memo = {}
+def longestConsecutinve(nums):
+    num_dict = {}
+    longest = 0
 
-    for v in nums:
-        memo[v] = 1
+    for num in nums:
+        num_dict[num] = 1
     
-    for v in nums:
-        time = v + 1
+    for num in nums:
         count = 0
-        while time in memo:
-            time = v + 1
-            count += 1
-
-    return count
+        time = num
+        prev = num - 1
+        if prev not in num_dict:
+            while time in num_dict:
+                time += 1
+                count += 1
+                if longest < count:
+                    longest = count
+        
+    return longest
             
 
-print(LCS([100,4,200,1,3,2]))
-print(LCS([0,3,7,2,5,8,4,6,0,1]))
+print(longestConsecutinve([100,4,200,1,3,2]))
+print(longestConsecutinve([0,3,7,2,5,8,4,6,0,1]))
