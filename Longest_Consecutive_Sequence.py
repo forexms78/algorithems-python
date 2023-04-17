@@ -5,13 +5,12 @@ def longestConsecutinve(nums):
     for num in nums:
         num_dict[num] = 1
     
-    for num in nums:
-        count = 0
-        time = num
-        prev = num - 1
-        if prev not in num_dict:
-            while time in num_dict:
-                time += 1
+    for num in num_dict:
+        if num - 1 not in num_dict:
+            count = 0
+            target = num
+            while target in num_dict:
+                target += 1
                 count += 1
                 if longest < count:
                     longest = count
