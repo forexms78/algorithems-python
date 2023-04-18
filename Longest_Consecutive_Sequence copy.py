@@ -5,8 +5,6 @@ def longestConsecutinve(nums):
     for num in nums:
         num_dict[num] = True
     
-    print(num)
-    
     for num in num_dict:
         if num - 1 not in num_dict:
             cnt = 1
