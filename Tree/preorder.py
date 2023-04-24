@@ -7,3 +7,4 @@ def preorder(cur_node):
     preorder(cur_node.right)
 
 preorder(root)
+

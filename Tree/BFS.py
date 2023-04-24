@@ -1,7 +1,7 @@
 def bfs(root):
     visited = []
     if root is None:
-        return 0
+        return 0;
     q = deque()
     q.append(root)
     while q:
