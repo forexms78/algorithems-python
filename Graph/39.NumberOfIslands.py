@@ -17,6 +17,8 @@ def numIsland(grid):
         queue.append((x,y))
         while queue:
             cur_x, cur_y = queue.popleft()
+
+
             for i in range(4):
                 next_x = cur_x + dx[i]
                 next_y = cur_y + dy[i]
